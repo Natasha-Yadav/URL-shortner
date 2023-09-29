@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        #welcome-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #continue-button {
+            background-color: #007bff; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <div id="welcome-message">
+            <h1>Welcome! </h1>
+            
+        </div>
+        <button id="continue-button">Continue</button>
+    </div>
+    <script>
+        
+        document.getElementById('continue-button').addEventListener('click', function() {
+            document.getElementById('welcome-screen').style.display = 'none';
+        });
+    
+        
+        setTimeout(function() {
+            document.getElementById('welcome-screen').style.display = 'none';
+        }, 10000);
+    </script>
+    </body>
+    </html>
+
+
+
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="maincontainer">
+    <h1>URL Shortener</h1>
+    <form>
+      <label for="long-url">Enter or Paste Your long URL:</label>
+      <input type="text" id="long-url" name="long-url">
+      <button type="button" id="shorten-btn">Shorten</button>
+    </form>
+    <div id="short-url-container" style="display:none">
+      <p>Here's your shortened URL:</p>
+      <div id="short-url">
+        <a href="" target="_blank"></a>
+        <button type="button" id="copy-btn">Copy</button>
+      </div>
+    </div>
+    
+</div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
